@@ -5,9 +5,10 @@ import LogoutIcon from "./icons/LogoutIcon";
 
 interface NavMenuProps {
   onLogout?: () => void;
+  userType?: string;
 }
 
-const NavigationMenu: React.FC<NavMenuProps> = ({ onLogout }) => {
+const NavigationMenu: React.FC<NavMenuProps> = ({ onLogout, userType }) => {
   const router = useRouter();
 
   const isActive = (path: string) => router.pathname === path;
@@ -22,12 +23,28 @@ const NavigationMenu: React.FC<NavMenuProps> = ({ onLogout }) => {
           >
             Tableau de Bord
           </Link>
+          {userType === "InstallateurPremiumWithSite" && (
+            <Link
+              href="/premium"
+              className={`hover:underline text-[13px] ${isActive("/premium") ? "font-bold" : ""}`}
+            >
+              Premium
+            </Link>
+          )}
           <Link
             href="/orders"
             className={`hover:underline text-[13px] ${isActive("/orders") ? "font-bold" : ""}`}
           >
             Commandes et retours
           </Link>
+          {userType === "InstallateurPremiumWithSite" && (
+            <Link
+              href="/subscriptions"
+              className={`hover:underline text-[13px] ${isActive("/subscriptions") ? "font-bold" : ""}`}
+            >
+              Souscriptions et contrats
+            </Link>
+          )}
           <Link
             href="/account"
             className={`hover:underline text-[13px] ${isActive("/account") ? "font-bold" : ""}`}

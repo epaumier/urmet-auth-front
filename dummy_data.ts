@@ -1,6 +1,5 @@
 // Re-export from particulierWithoutZeno for backward compatibility
 export {
-  ContactUsData,
   FeedData,
   QuoteData,
   OrdersHeadings,

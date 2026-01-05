@@ -1,6 +1,6 @@
 const MAGENTO_BASE_URL = "https://www.urmet.fr";
 
-export type UserType = "particulierWithoutZeno" | "interneUrmet";
+export type UserType = "particulierWithoutZeno" | "interneUrmet" | "InstallateurPremiumWithSite";
 
 export interface LoginCredentials {
   username: string;

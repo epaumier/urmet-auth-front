@@ -8,6 +8,8 @@ export async function loadDataForUserType(userType: UserType) {
     return await import("../dummyData/particulierWithoutZeno");
   } else if (userType === "interneUrmet") {
     return await import("../dummyData/interneUrmet");
+  } else if (userType === "InstallateurPremiumWithSite") {
+    return await import("../dummyData/InstallateurPremiumWithSite");
   }
 
   // Default fallback

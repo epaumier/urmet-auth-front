@@ -37,6 +37,18 @@ export default function UserTypeSelector() {
           />
           <span className="text-sm">Interne URMET/SAV</span>
         </label>
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="radio"
+            name="userType"
+            value="InstallateurPremiumWithSite"
+            checked={userInfo?.userType === "InstallateurPremiumWithSite"}
+            onChange={handleChange}
+            disabled={isLoading}
+            className="w-4 h-4 cursor-pointer"
+          />
+          <span className="text-sm">Installateur Premium avec site</span>
+        </label>
       </div>
     </div>
   );
