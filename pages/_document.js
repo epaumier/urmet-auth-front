@@ -1,10 +1,9 @@
-import React from 'react';
-import { Html, Head, Main, NextScript } from 'next/document';
+import { Main, NextScript } from 'next/document';
 
-export default function Document(): React.JSX.Element {
+export default function Document() {
   return (
-    <Html>
-      <Head>
+    <html>
+      <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -19,11 +18,11 @@ export default function Document(): React.JSX.Element {
           href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
           rel="stylesheet"
         ></link>
-      </Head>
+      </head>
       <body>
         <Main />
         <NextScript />
       </body>
-    </Html>
+    </html>
   );
 }
