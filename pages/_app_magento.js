@@ -347,5 +347,3 @@ function App(props) {
     React.createElement(AppContent, props)
   );
 }
-
-export default App;
